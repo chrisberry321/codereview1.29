@@ -1,34 +1,46 @@
 function Pizza(pizzaSize, vegtableTopping, meatTopping, totalPrice) {
   this.pizzaSize = pizzaSize;
-  this.vegtableTopping = vegtableTopping
-  this.meatTopping = meatTopping
-  this.totalPrice = []
+  this.vegtableTopping = vegtableTopping;
+  this.meatTopping = meatTopping;
+  this.totalPrice = [];
+
+  Pizza.prototype.pizzaSize = function() {
+    var totalPrice = 6;
+    if (this.pizzaSize === "small") {
+      totalPrice =+ 0;
+    }else if(this.pizzaSize === "medium") {
+      totalPrice =+ 2;
+    }else if(this.pizzaSize === "large") {
+      totalPrice =+ 4;
+    }else if(this.pizzaSize === "jumbo") {
+      totalPrice =+ 8;
+    }else {
+      return alert("Need to pick a pizza size")
+    }
+  };
+
+  Pizza.prototype.vegtableTopping = function() {
+    for (i =0; i < this.vegtableTopping.length; i++) {
+      this.totalPrice =+ [1];
+    }
+    return this.totalPrice + this.vegtableTopping.length;
+  };
+
+  Pizza.prototype.meatTopping = function() {
+    for (i =0; i < this.meatTopping.length; i++) {
+      this.totalPrice =+ [2];
+    }
+    return this.totalPrice + this.vegtableTopping.length + this.meatTopping.length;
+  };
 };
-Pizza.prototype.pizzaSize = function() {
-  if (this.pizzaSize === "small") {
-    return this.totalPrice =+ 6;
-  }else if(this.pizzaSize === "medium") {
-    return this.totalPrice =+ 8;
-  }else if(this.pizzaSize === "large") {
-    return this.totalPrice =+ 10;
-  }else if(this.pizzaSize === "jumbo") {
-    return this.totalPrice =+ 14;
-  }else {
-    return alert("Need to pick a pizza size")
-  }
-};
-
-Pizza.prototype.vegtableTopping = function() {
-  for (i =0; i < this.vegtableTopping.length; i++) {
-    this.totalPrice =+ 1;
-  }
-}
 
 
 
+$(document).ready(function() {
 
 
 
+});
 
 
 
@@ -76,7 +88,7 @@ Pizza.prototype.vegtableTopping = function() {
 
 
 
-
+//
 // function Pizza(pizzaSize, pizzaToppings) {
 //   this.pizzaSize = pizzaSize;
 //   this.pizzaToppings = pizzaToppings;
@@ -100,7 +112,7 @@ Pizza.prototype.vegtableTopping = function() {
 //   }
 //   return this.pizzaPrice;
 // };
-//
+// //
 //
 // $(function() {
 //   $("form#add-pizza").submit(function(event) {
