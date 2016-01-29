@@ -1,37 +1,27 @@
 describe('Pizza', function() {
   it("will create a new pizza order with the given properties", function() {
-    var testPizza = new Pizza("small", "olives, peppers, onions", "sasage");
+    var testPizza = new Pizza("small", "olives, peppers, onions, sasage");
     expect(testPizza.pizzaSize).to.equal("small");
-    expect(testPizza.vegtableTopping).to.equal("olives, peppers, onions");
-    expect(testPizza.meatTopping).to.equal("sasage");
-    expect(testPizza.totalPrice).to.eql([]);
+    expect(testPizza.toppingsList).to.equal("olives, peppers, onions, sasage");
   });
 });
 
 describe('pizzaSize', function() {
   it("will give a price for the size of a pizza and alert if a size is not picked", function() {
     var testPizza = new Pizza("small");
-    var totalPrice = [6];
     // debugger;
-    expect(testPizza.totalPrice).to.equal("small", ([6]));
+    expect(testPizza.totalPrice).to.eql[6];
   });
 });
 
-describe('vegtableTopping', function() {
+describe('toppingsList', function() {
   it("will give a price for the size and add a dollar for each vegtableTopping picked", function() {
-    var testPizza = new Pizza("small", "olives, peppers, onions");
-    expect(testPizza.totalPrice).to.eql[9];
-  });
-});
-
-describe('meatTopping', function() {
-  it("will give a price for the size and add a dollar for each vegtableTopping and meatTopping picked", function() {
     var testPizza = new Pizza("small", "olives, peppers, onions", "sasage, pepperoni");
-    // debugger;
     expect(testPizza.totalPrice).to.eql[13];
   });
-
 });
+
+
 
 
 

@@ -12,24 +12,53 @@
     <div class="header"> <!-- header -->
 
       <div class="jumbotron">
-        <h1>Pizza Joint</h1>
-        <p>Order a Slice</p>
+        <h1>Pizza Order Form</h1>
+        <p>Order your own pie</p>
+        <img src="images/pizzacat.jpg" alt="cat with pizza for eyes" id="catPhoto" />
       </div>
-    </div> <!-- end header -->
-    <div class="container"> <!-- wrapper -->
-      <div class="row"> <!-- row -->
-        <div class="col-md-8">
-          <h2>Order Your Pizza</h2>
-          <form id="add-pizza" class="form-group"> <!-- form -->
-            <label for="new-pizza-size">Choose Your Pizza's Size</label>
-            <select class="select" name="new-pizza-size">
-              <option value="sm">Small</option>
-              <option value="md">Medium</option>
-            </select>
-          </form> <!-- end form -->
-        </div>
-      </div> <!-- end row -->
-    </div> <!-- end wrapper -->
+      <div class="container">
+        <h2>Now lets make the perfect pizza.</h2>
+        <div class="row"> <!--row-->
+          <div class="col-xs-8"> <!--column 1-->
+            <form class="pizza-form">
+              <div class="form-group"><!--size-->
+                <label for="pizza-size">Size Queen?</label>
+
+                <select id="pizza-size">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                  <option value="jumbo">Jumbo</option>
+                </select>
+              </div><!--size end-->
+
+              <div class="form-group">
+                <h4>Here are some vegtables to choose from.</h4><!--checkbox-->
+                <input type="checkbox" name="topping" value="Artichoke hearts" id="Artichoke hearts"> Artichoke hearts<br>
+                <input type="checkbox" name="topping" value="Bell Peppers" id="Bell Peppers"> Bell Peppers<br>
+                <input type="checkbox" name="topping" value="Onions" id="Onions"> Onions<br>
+                <input type="checkbox" name="topping" value="mushrooms" id="mushrooms"> Mushrooms<br>
+                <input type="checkbox" name="topping" value="Red Onions" id="Red Onions"> Red Onions<br>
+                <input type="checkbox" name="topping" value="Sun Dried Tomatoes" id="Sun Dried Tomatoes"> Sun Dried Tomatoes<br>
+                <br>
+                <h4>How about some meat.</h4>
+                <input type="checkbox" name="topping" value="Pepperoni" id="Pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="topping" value="Sausage" id="Sausage"> Sausage<br>
+                <input type="checkbox" name="topping" value="Canadian Bacon" id="Canadian Bacon"> Canadian Bacon<br>
+                <input type="checkbox" name="topping" value="Bacon" id="Bacon"> Bacon<br>
+                <input type="checkbox" name="topping" value="BBQ chicken" id="BBQ chicken"> BBQ chicken<br>
+                <input type="checkbox" name="topping" value="Proscuitto" id="Proscuitto"> Proscuitto<br>
+              </div> <!--checkbox end-->
+
+              <input type="submit" value="Submit">
+            </form>
+          </div> <!--column 1 end-->
+          <div class="col-xs-4 result"> <!--column 2-->
+
+          </div> <!--column 2 end-->
+        </div> <!--row end-->
+      </div>
+
 
   </body>
 </html>
