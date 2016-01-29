@@ -6,33 +6,40 @@ function Pizza(pizzaSize, vegtableTopping, meatTopping, totalPrice) {
 
   Pizza.prototype.pizzaSize = function() {
     var totalPrice = 6;
-    if (this.pizzaSize === "small") {
-      totalPrice =+ 0;
-    }else if(this.pizzaSize === "medium") {
-      totalPrice =+ 2;
+    if (this.pizzaSize === "jumbo") {
+      totalPrice += 8;
     }else if(this.pizzaSize === "large") {
-      totalPrice =+ 4;
-    }else if(this.pizzaSize === "jumbo") {
-      totalPrice =+ 8;
+      totalPrice += 4;
+    }else if(this.pizzaSize === "medium") {
+      totalPrice += 2;
+    }else if(this.pizzaSize === "small") {
+      totalPrice =+ 0;
     }else {
       return alert("Need to pick a pizza size")
     }
   };
 
-  Pizza.prototype.vegtableTopping = function() {
-    for (i =0; i < this.vegtableTopping.length; i++) {
-      this.totalPrice =+ [1];
+  Pizza.prototype.vegtableTopping = function(topping) {
+    var addedvegtables = ["Artichoke hearts", "Bell Peppers", "Mushrooms", "Onions", "Red Onions", "Sun Dried Tomatoes"]
+    var vegtableTopping = [];
+    for (i =0; i < addedvegtables.length; i++) {
+      if (addedvegtables[i] = topping) {
+        this.vegtableTopping.push(addedvegtables[i])
+      }
     }
-    return this.totalPrice + this.vegtableTopping.length;
+    return this.vegtableTopping
   };
 
-  Pizza.prototype.meatTopping = function() {
-    for (i =0; i < this.meatTopping.length; i++) {
-      this.totalPrice =+ [2];
+  Pizza.prototype.meatTopping = function(topping2) {
+    var addedmeats =["Pepperoni", "Sausage", "Canadian Bacon", "Bacon", "BBQ chicken", "Proscuitto"]
+    var meatTopping = [];
+    for (i =0; i < addedmeats.length; i++) {
+      if (addedmeats[i] = topping2) {
+        this.meatTopping.push(addedmeats[i])
+      }
     }
-    return this.totalPrice + this.vegtableTopping.length + this.meatTopping.length;
+    return this.meatTopping
   };
-};
 
 
 
