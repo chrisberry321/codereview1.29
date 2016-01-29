@@ -3,45 +3,50 @@ function Pizza(pizzaSize, vegtableTopping, meatTopping, totalPrice) {
   this.vegtableTopping = vegtableTopping;
   this.meatTopping = meatTopping;
   this.totalPrice = [];
+}
 
-  Pizza.prototype.pizzaSize = function() {
-    var totalPrice = 6;
-    if (this.pizzaSize === "jumbo") {
-      totalPrice += 8;
-    }else if(this.pizzaSize === "large") {
-      totalPrice += 4;
-    }else if(this.pizzaSize === "medium") {
-      totalPrice += 2;
-    }else if(this.pizzaSize === "small") {
-      totalPrice =+ 0;
-    }else {
-      return alert("Need to pick a pizza size")
-    }
-  };
+  Pizza.prototype.totalPrice = function() {
+    return this.pizzaSize + 'with' + this.vegtableTopping + 'and' + this.meatTopping;
 
-  Pizza.prototype.vegtableTopping = function(topping) {
-    var addedvegtables = ["Artichoke hearts", "Bell Peppers", "Mushrooms", "Onions", "Red Onions", "Sun Dried Tomatoes"]
-    var vegtableTopping = [];
-    for (i =0; i < addedvegtables.length; i++) {
-      if (addedvegtables[i] = topping) {
-        this.vegtableTopping.push(addedvegtables[i])
+    Pizza.prototype.pizzaSize = function() {
+      var totalPrice = 6;
+      if (this.pizzaSize === "jumbo") {
+        totalPrice += 8;
+      }else if(this.pizzaSize === "large") {
+        totalPrice += 4;
+      }else if(this.pizzaSize === "medium") {
+        totalPrice += 2;
+      }else if(this.pizzaSize === "small") {
+        totalPrice =+ 0;
+      }else {
+        return alert("Need to pick a pizza size")
       }
-    }
-    return this.vegtableTopping
-  };
+    };
 
-  Pizza.prototype.meatTopping = function(topping2) {
-    var addedmeats =["Pepperoni", "Sausage", "Canadian Bacon", "Bacon", "BBQ chicken", "Proscuitto"]
-    var meatTopping = [];
-    for (i =0; i < addedmeats.length; i++) {
-      if (addedmeats[i] = topping2) {
-        this.meatTopping.push(addedmeats[i])
+    Pizza.prototype.vegtableTopping = function(topping) {
+      var addedvegtables = ["Artichoke hearts", "Bell Peppers", "Mushrooms", "Onions", "Red Onions", "Sun Dried Tomatoes"]
+      var vegtableTopping = [];
+      for (i =0; i < addedvegtables.length; i++) {
+        if (addedvegtables[i] = topping) {
+          this.vegtableTopping.push(addedvegtables[i])
+        }
       }
-    }
-    return this.meatTopping
+      return this.vegtableTopping
+    };
+
+    Pizza.prototype.meatTopping = function(topping2) {
+      var addedmeats =["Pepperoni", "Sausage", "Canadian Bacon", "Bacon", "BBQ chicken", "Proscuitto"]
+      var meatTopping = [];
+      for (i =0; i < addedmeats.length; i++) {
+        if (addedmeats[i] = topping2) {
+          this.meatTopping.push(addedmeats[i])
+        }
+      }
+      return this.meatTopping
+    };
+    return totalPrice
+
   };
-
-
 
 $(document).ready(function() {
 
