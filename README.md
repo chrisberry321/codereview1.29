@@ -6,7 +6,7 @@
 
 ## Description
 
-A Form gathers input from the user. JavaScript is used to run the imputs from the object to  show the results after the input is submitted. Also, it is styled using _Bootstrap_ and custom _CSS_ with box model and floats.
+A Form gathers input from the user about what size pizza they want, and the toppings they wish to add. JavaScript is used to run the inputs from the object to show the results after the input is submitted. Also, it is styled using _Bootstrap_ and custom _CSS_ with box model and floats.
 Variable names are descriptive of what they represent, and use lower camel case.
 
 
@@ -17,7 +17,7 @@ Variable names are descriptive of what they represent, and use lower camel case.
 [Click here](https://chrisberry321.github.io/codereview1.29/)
 https://github.com/chrisberry321/codereview1.29.git
 
-All links to _chai_, _mocha_, _Bootstrap_ and _jQuery_ are in the current folders, but if you are having troubles loading them clone the repository and download the uncompressed files and try linking to them.
+All links to _chai_, _mocha_, _Bootstrap_ and _JavaScript_ are in the current folders, but if you are having troubles loading them clone the repository and download the uncompressed files and try linking to them.
 
 ## Known Bugs
 No known bugs at this time.
@@ -28,11 +28,10 @@ If you have any troubles ideas or concerns feel free to contact me at chrisberry
 
 ## Technologies Used
 
-A _JavaScript_ loop is used to display the results, and add either ping or pong or pingpong to the assigned variables.
+An _object_ is used to allow users to pick what type of pizza they want, and it will display the pizza and the price in the results. 
 
 ### License
 
 This software is licensed under the MIT license.
 
 Copyright (c) 2016 Chris Berry
-
