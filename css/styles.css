@@ -1,8 +1,18 @@
-.col-xs-4 result {
+.result {
   text-align: center;
   color: blue;
+
 }
 
 #catPhoto {
   float: right;
+}
+
+.jumbotron {
+  padding: 30px 15px;
+  background-color: #f2f9f4;
+  text-align: center;
+  background-size: cover;
+  background-image: url("images/pizzacat.jpg") no-repeat right;
+  height: 460px;
 }
