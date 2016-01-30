@@ -53,3 +53,4 @@ $(document).ready(function() {
     $(".result").text(newPizza.sizeAndPrice() + " with " + inputtedToppings +  " will be $" + newPizza.pricer() + ".00");
   });
 })
+   
